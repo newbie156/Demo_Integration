@@ -93,10 +93,10 @@ def multiply():
 
 def divide():
     a, b = run()
-    if b != 0:
+    try:
         return a / b
-    else:
-        return 'Деление на 0!'
+    except Exception as error:
+        return 'Нельзя делить на 0!', error
 
 
 def mod():
